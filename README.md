@@ -17,7 +17,7 @@ POST Body template:
       "price": 9.99,
       "quantity": 5
 }
-Read all inventory items: GET /v1/inventories
+Read all inventory items: GET /v1/inventories (query params: page={1..}, perPage={1..100}, name=String, description=String, price=Number, quantity=Number)
 Read single inventory item: GET /v1/inventories/{id}
 Update inventory item: PUT /v1/inventories/{id}
 Delete inventory item: DELETE /v1/inventories/{id}
@@ -29,7 +29,7 @@ POST Body template:
       "orderLines": [{ "inventoryId": "5e13d2dbbacb3800395d0b90", "price": 19.99, "quantity": 2 }]
 }
 
-Read all orders: GET /v1/orders
+Read all orders: GET /v1/orders (query params: page=Number, perPage={1..100}, inventoryId=String,price=Number, quantity=Number)
 Read single order: GET /v1/orders/{id}
 Update order: PUT /v1/orders/{id}
 Delete order: DELETE /v1/orders/{id}
